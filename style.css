@@ -15,6 +15,10 @@ div div {
     justify-content: space-around;
 }
 
+.main {
+    background-color: rgb(247, 247, 247);
+}
+
 .cart {
     width: 75%;
     min-height: 20em;
@@ -98,4 +102,19 @@ button[class*=btn] {
 .total-item-price {
     text-align: right;
     margin: auto .5em;
+}
+
+.card {
+    width: 20em;
+    margin: 1em .5em;
+    padding: 1em;
+    box-shadow: .2em .4em .1em 0em rgba(0,0,0,0.1);
+}
+
+.card > * {
+    margin: .25em;
+}
+
+#selectors select {
+    margin: 1em .5em;
 }
