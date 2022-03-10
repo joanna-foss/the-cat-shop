@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"Shirley",
+        "type":"Domestic Short Hair",
+        "color":["Black"],
+        "gender":"Female"
+    },
+    {
+        "id":2,
+        "name":"Floofer",
+        "type":"Mainecoon",
+        "color":["Multi-colored"],
+        "gender":"Male"
+    },
+    {
+        "id":3,
+        "name":"Dolly",
+        "type":"Domestic Short Hair",
+        "color":["Brindle", "Multi-colored"],
+        "gender":"Female"
+    },
+    {
+        "id":4,
+        "name":"Peanut",
+        "type":"Siamese",
+        "color":["Beige", "Multi-colored"],
+        "gender":"Male"
+    },
+    {
+        "id":5,
+        "name":"Parsley",
+        "type":"Tabby",
+        "color":["Gray", "Black", "Multi-colored"],
+        "gender":"Female"
+    },
+    {
+        "id":6,
+        "name":"Dan",
+        "type":"Domestic Short Hair",
+        "color":["Orange"],
+        "gender":"Male"
+    }
+]
