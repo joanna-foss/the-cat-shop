@@ -12,7 +12,6 @@ body {
 
 div div {
     margin: auto 0;
-
     justify-content: space-around;
 }
 
@@ -64,21 +63,22 @@ div div {
 }
 
 .description {
-    width: 10em;
+    margin: auto 1em;
+    text-align: left;
 }
 
 .quantity {
     margin: auto 1em;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
 }
 
 .quantity input {
     border: none;
     text-align: center;
     width: 1.5em;
-    margin: 3px auto;
+    margin: auto;
     padding: .25em;
     font-size: 1.25em;
     color:rgb(82, 82, 82);
@@ -92,6 +92,7 @@ button[class*=btn] {
     background-color: #E1E8EE;
     border-radius: 6px;
     cursor: pointer;
+    border: none;
 }
 
 .total-item-price {
