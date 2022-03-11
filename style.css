@@ -124,6 +124,8 @@ button[class*=btn] {
     margin: 1em .5em;
     padding: 1em;
     box-shadow: .2em .4em .1em 0em rgba(0,0,0,0.1);
+    animation-name: fadeUp;
+    animation-duration: .5s;
 }
 
 .card > * {
@@ -138,4 +140,19 @@ button[class*=btn] {
 
 #selectors select {
     margin: 1em .5em;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(5%);
+        opacity: 0%;
+    }
+    90% {
+        transform: translateY(-1%);
+        opacity: 80%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
 }
