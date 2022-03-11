@@ -14,8 +14,14 @@
     <!--Scripts-->
     <script src="script.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+<nav class="d-flex justify-content-around align-items-center">
+    <h4>Logo Here</h4>
+    <div></div>
+    <h6>items in cart: <span id="number-in-cart" value="0">0</span></h6>
+</nav>
 
 <div class="container main">
 
@@ -39,9 +45,7 @@
     <!--Cats Available Div-->
     <div class="d-flex flex-column align-items-center" id="cats-available">
         <h2>Our Available Cats</h2>
-        <div class="d-flex justify-content-around flex-wrap" id="cats-container">
-
-        </div>
+        <div class="d-flex justify-content-around flex-wrap" id="cats-container"></div>
     </div>
 </div>
 </body>

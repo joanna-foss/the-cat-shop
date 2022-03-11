@@ -15,41 +15,33 @@ $(document).ready(() => {
             //creates appropriate selector html
             create_selector_html();
 
-            //insertion area begins - REFACTOR NECESSARY ON ALL CODE HERE
+            //insertion area begins - REFACTOR ALL CODE HERE
 
             cat_data.forEach((cat) => {
-                $('#cats-container').append(
-                    '<div class="card d-flex">' +
-                    '<img src="https://placekitten.com/200/300" alt="placeholder cat picture">' +
-                    '<div class="cat-details"><h3>' + cat.name + '</h3>' +
-                    '<h5>' + cat.type + '</h5>' +
-                    '<h6>' + cat.color + '</h6></div>' +
-                    '</div>'
-                );
+                add_cat_to_html(cat);
             });
 
             $('#type').on('change', () => {
-                let cat_type = $('#type').val();
-                $('#cats-container').html('');
-
-                cat_data.forEach((cat) => {
-                    if(cat_type == '') {
-                        console.log(cat.type);
-                        $('#cats-container').append(
-                            '<div class="card d-flex">' +
-                            '<img src="https://placekitten.com/200/300" alt="placeholder cat picture">' +
-                            '<div class="cat-details"><h3>' + cat.name + '</h3>' +
-                            '<h5>' + cat.type + '</h5>' +
-                            '<h6>' + cat.color + '</h6></div>' +
-                            '</div>'
-                        );
-                    }
-                    
-                })
+                update_preferences();
             })
 
+            $('#color').on('change', () => {
+                update_preferences();
+            })
+
+            $('#gender').on('change', () => {
+                update_preferences();
+            })
+
+            add_btns = document.getElementsByClassName("add-to-cart");
+            for(let i = 0; i < add_btns.length; i++) {
+                add_btns[i].addEventListener("click", () => {
+                    increment_cart();
+                })
+            }
+
             //insertion area ends
-        });
+        }); 22 
 
     function fill_cat_info(data) {
         cat_data = data;
@@ -102,4 +94,43 @@ $(document).ready(() => {
         let gender_selector = document.getElementById('gender');
         gender_selector.innerHTML = html_gender;
     }
-    })
+
+    function update_preferences() {
+        let cat_type = $('#type').val();
+        let cat_color = $('#color').val();
+        let cat_gender = $('#gender').val();
+
+        $('#cats-container').html('');
+
+        cat_data.forEach((cat, index, array) => {
+            if(cat_type == '') {
+                add_cat_to_html(cat);
+            } else {
+                if (cat_data[index].type == cat_type) {
+                    console.log(cat.type);
+                    add_cat_to_html(cat);
+                }
+            }
+        });
+    }
+
+    function add_cat_to_html(cat) {
+        $('#cats-container').append(
+            '<div class="card d-flex">' +
+            '<img src="https://placekitten.com/200/300" alt="placeholder cat picture">' +
+            '<div class="cat-details"><h3>' + cat.name + '</h3>' +
+            '<h5>' + cat.type + '</h5>' +
+            '<h6>' + cat.color + '</h6></div>' +
+            '<button type="submit" name="cat-' + cat.id +
+            '" class="add-to-cart" id="cat-' + cat.id + '">Add to Cart</button>' +
+            '</div>'
+        );
+    }
+
+    function increment_cart() {
+        let number = parseInt($('#number-in-cart').html());
+        number++;
+        console.log(number);
+        $('#number-in-cart').html(number);
+    }
+})
