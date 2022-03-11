@@ -164,7 +164,7 @@ button[class*=add-to-cart]:target {
         transform: translateY(5%);
         opacity: 0%;
     }
-    90% {
+    70% {
         transform: translateY(-1%);
         opacity: 80%;
     }

@@ -122,7 +122,7 @@ $(document).ready(() => {
             '<h5>' + cat.type + '</h5>' +
             '<h6>' + cat.color + '</h6></div>' +
             '<button type="submit" name="cat-' + cat.id +
-            '" class="add-to-cart" id="cat-' + cat.id + '">Add to Cart</button>' +
+            '" class="add-to-cart btn" id="cat-' + cat.id + '">Add to Cart</button>' +
             '</div>'
         );
     }
