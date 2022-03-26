@@ -1,4 +1,3 @@
-$(document).ready(() => {
     console.log("test");
 
     let cat_data = []; //variable to hold array of cat objects
@@ -12,11 +11,10 @@ $(document).ready(() => {
             //fills variables with appropriate data
             fill_cat_info(data);
 
-            //creates appropriate selector html
+            // creates appropriate selector html
             create_selector_html();
 
-            //insertion area begins - REFACTOR ALL CODE HERE
-
+            // insertion area begins - REFACTOR ALL CODE HERE
             cat_data.forEach((cat) => {
                 add_cat_to_html(cat);
             });
@@ -41,7 +39,7 @@ $(document).ready(() => {
             }
 
             //insertion area ends
-        }); 22 
+        }); 
 
     function fill_cat_info(data) {
         cat_data = data;
@@ -133,4 +131,3 @@ $(document).ready(() => {
         console.log(number);
         $('#number-in-cart').html(number);
     }
-})
